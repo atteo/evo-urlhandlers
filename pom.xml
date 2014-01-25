@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>parent</artifactId>
 		<groupId>org.atteo</groupId>
-		<version>1.6</version>
+		<version>1.7</version>
 	</parent>
 	<artifactId>evo-urlhandlers</artifactId>
 	<version>1.0-SNAPSHOT</version>
@@ -24,13 +24,8 @@
 		<url>https://github.com/atteo/evo-urlhandlers</url>
 	</scm>
 	<dependencies>
-		<!--
-			 Use sisu version as at contains workaround for:
-			 ClassNotFoundException: org.objectweb.asm.util.TraceClassVisitor
-		-->
 		<dependency>
-			<!-- <groupId>cglib</groupId> -->
-			<groupId>org.sonatype.sisu.inject</groupId>
+			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 		</dependency>
 		<dependency>
