@@ -13,11 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.atteo.evo.urlhandlers;
+package org.atteo.urlhandlers;
 
 import java.net.URLStreamHandler;
 
-import org.atteo.evo.classindex.ClassIndex;
+import org.atteo.classindex.ClassFilter;
+import org.atteo.classindex.ClassIndex;
 
 import net.sf.cglib.core.NamingPolicy;
 import net.sf.cglib.core.Predicate;
@@ -59,7 +60,7 @@ public class UrlHandlers {
 	}
 
 	public static void registerAnnotatedHandlers() {
-		for (Class<?> klass : ClassIndex.getAnnotated(UrlHandler.class)) {
+		for (Class<?> klass : ClassFilter.only().topLevel().from(ClassIndex.getAnnotated(UrlHandler.class))) {
 			if (!(URLStreamHandler.class.isAssignableFrom(klass))) {
 				throw new RuntimeException("Classes marked with @" + UrlHandler.class.getSimpleName() + " annotation"
 						+ " must extend " + URLStreamHandler.class.getCanonicalName());

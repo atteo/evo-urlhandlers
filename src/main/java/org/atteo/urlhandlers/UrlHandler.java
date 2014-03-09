@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.atteo.evo.urlhandlers;
+package org.atteo.urlhandlers;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -22,7 +22,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.net.URLStreamHandler;
 
-import org.atteo.evo.classindex.IndexAnnotated;
+import org.atteo.classindex.IndexAnnotated;
 
 /**
  * Registers annotated handler for a given scheme.

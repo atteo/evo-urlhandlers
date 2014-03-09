@@ -13,8 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.atteo.evo.urlhandlers;
+package org.atteo.urlhandlers;
 
+import org.atteo.urlhandlers.UrlHandlers;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
